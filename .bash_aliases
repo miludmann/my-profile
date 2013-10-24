@@ -1,0 +1,18 @@
+alias ls='ls -aF --color=auto --group-directories-first'
+alias ll='ls -lh'
+alias agi='sudo apt-get install'
+alias agr='sudo apt-get remove'
+alias agu='sudo apt-get update'
+alias ags='sudo apt-cache search'
+alias ..='cd ../'
+alias shutdown='sudo shutdown -h now'
+alias restart='sudo shutdown -r now'
+alias diff='colordiff'
+alias root='sudo -i'
+alias wget='wget -c'
+alias srcb='source ~/.bashrc'
+alias top='htop'
+alias make='colormake'
+alias git='hub'
+
+function mkgo() { mkdir -p "$@" && eval cd "\"\$$#\"";}
