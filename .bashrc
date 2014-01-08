@@ -31,5 +31,10 @@ if [ -d "/opt/leJOS_NXJ" ] ; then
     PATH="$NXJ_HOME/bin:$PATH"
 fi
 
+# Local binaries (for new tools, like VIM)
+if [ -d "/opt/local/bin" ]; then
+    PATH="/opt/local/bin:$PATH"
+fi
+
 source ~/germs/germs/infect.sh
 source ~/germs/germs/cure.sh
