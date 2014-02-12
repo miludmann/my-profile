@@ -28,6 +28,7 @@ cd .vim
 git submodule update --init --recursive
 cd
 ln -s .vim/.vimrc
+ln -s .vim/solarize.sh
 
 agi -y build-essential cmake
 agi -y python-dev
