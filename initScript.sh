@@ -13,8 +13,12 @@ git clone https://github.com/miludmann/my-profile
 cat .bashrc my-profile/.bashrc > .bashrc_tmp
 rm -f .bashrc
 mv .bashrc_tmp .bashrc
-ln -s my-profile/.bash_aliases
-source .bashrc
+ln -s my-profile/.aliases
+
+sudo apt-get install -y zsh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+ln -s my-profile/.zshrc
+zsh
 
 # Custom VIM
 cd
