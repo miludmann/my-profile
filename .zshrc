@@ -144,6 +144,7 @@ else
     start_agent;
 fi
 
+# Handle solarize theme mainly for VIM
 if [ -e /lib/terminfo/x/xterm-256color ]; then
     export TERM='xterm-256color'
 else
