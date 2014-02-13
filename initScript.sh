@@ -52,11 +52,7 @@ hg update default
 make -j2
 sudo make install
 cd
-source .bashrc
-
-sudo apt-get install -y bzr
-#https://gforge-portail.orangeportails.net/wiki/g/bazaar/BazaaInstall
-sudo apt-get install bzr-melanie
+zsh
 
 agi -y automake
 agi -y autoconf

@@ -155,4 +155,4 @@ if [ -f $HOME/.Xdefaults ]; then
     xrdb -merge $HOME/.Xdefaults
 fi
 
-./solarize.sh dark
+~/solarize.sh dark
