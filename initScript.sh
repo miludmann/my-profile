@@ -56,7 +56,7 @@ hg clone https://vim.googlecode.com/hg/ vim
 cd vim
 hg pull
 hg update default
-./configure -prefix="/opt/local" --enable-gui=auto --enable-cscope --enable-pythoninterp=yes --with-python-config-dir=/usr/lib/python2.7/config --enable-sniff --enable-luainterp=yes --enable-rubyinterp=yes
+./configure -prefix="/opt/local" --enable-gui=auto --enable-cscope --enable-pythoninterp=yes --with-python-config-dir=/usr/lib/python2.7/config --enable-sniff --enable-luainterp=yes --enable-rubyinterp=yes --with-features=huge
 make -j2
 sudo make install
 cd
