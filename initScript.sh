@@ -14,6 +14,7 @@ cat .bashrc my-profile/.bashrc > .bashrc_tmp
 rm -f .bashrc
 mv .bashrc_tmp .bashrc
 ln -s my-profile/.aliases
+ln -s my-profile/.gitconfig
 
 sudo apt-get install -y zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
