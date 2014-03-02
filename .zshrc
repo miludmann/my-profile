@@ -112,7 +112,7 @@ fi
 
 # leJOS intallation directory
 if [ -d "/opt/leJOS_NXJ" ] ; then
-    NXJ_HOME="/opt/leJOS_NXJ"
+    export NXJ_HOME="/opt/leJOS_NXJ"
     PATH="$NXJ_HOME/bin:$PATH"
 fi
 
@@ -156,3 +156,5 @@ if [ -f $HOME/.Xdefaults ]; then
 fi
 
 ~/solarize.sh dark
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
