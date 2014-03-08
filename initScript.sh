@@ -15,6 +15,8 @@ rm -f .bashrc
 mv .bashrc_tmp .bashrc
 ln -s my-profile/.aliases
 ln -s my-profile/.gitconfig
+ln -s my-profile/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
 
 sudo apt-get install -y zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
