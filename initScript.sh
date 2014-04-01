@@ -40,12 +40,17 @@ ln -s .vim/solarize.sh
 # Install YCM with clang
 sudo apt-get install -y build-essential cmake
 sudo apt-get install -y python-dev
+
+# Append repositories to sources.list
+sudo sh -c 'echo "
+# Repositories to get latest clang library for YouCompleteMe in Vim
+deb http://llvm.org/apt/precise/ llvm-toolchain-precise main
+deb-src http://llvm.org/apt/precise/ llvm-toolchain-precise main
+deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu precise main" >> /etc/apt/sources.list'
+
 # Add the following in your /etc/apt/sources.list
-#deb http://llvm.org/apt/precise/ llvm-toolchain-precise main
-#deb-src http://llvm.org/apt/precise/ llvm-toolchain-precise main
-#deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu precise main
 sudo apt-get update
-sudo apt-get install -y libclang-3.5-dev
+sudo apt-get install -y libclang-3.5-dev --force-yes
 sudo ln -s /usr/lib/llvm-3.5/lib/libclang.so /usr/lib/
 cd ~/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer --system-libclang
