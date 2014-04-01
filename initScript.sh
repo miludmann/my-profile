@@ -25,6 +25,7 @@ sudo apt-get install -y zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 ln -s my-profile/.zshrc
 source .zshrc
+chsh -s /bin/zsh
 
 # Custom VIM
 cd
