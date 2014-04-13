@@ -158,3 +158,6 @@ fi
 ~/solarize.sh dark
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+export PROTOBUF_DIR=/home/parapampa/dev/orwell/protobuf-2.5.0
+export JEROMQ_DIR=/home/parapampa/dev/orwell/jeromq
