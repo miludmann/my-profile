@@ -1,11 +1,14 @@
 # Change default language to English
 sudo update-locale LANG=en_US.UTF-8 LANGUAGE=en_US:en
 
+cd
+
 # Install hub for git
 git clone https://github.com/github/hub.git
 cd hub
-agi -y rake
+sudo apt-get install -y rake
 sudo rake install prefix=/opt/local
+sudo apt-get install -y rbenv curl
 
 # Personal profile
 cd
@@ -21,7 +24,8 @@ git config --global core.excludesfile ~/.gitignore_global
 sudo apt-get install -y zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 ln -s my-profile/.zshrc
-zsh
+source .zshrc
+chsh -s /bin/zsh
 
 # Custom VIM
 cd
@@ -34,27 +38,32 @@ ln -s .vim/.vimrc
 ln -s .vim/solarize.sh
 
 # Install YCM with clang
-agi -y build-essential cmake
-agi -y python-dev
+sudo apt-get install -y build-essential cmake
+sudo apt-get install -y python-dev
+
+# Append repositories to sources.list
+sudo sh -c 'echo "
+# Repositories to get latest clang library for YouCompleteMe in Vim
+deb http://llvm.org/apt/precise/ llvm-toolchain-precise main
+deb-src http://llvm.org/apt/precise/ llvm-toolchain-precise main
+deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu precise main" >> /etc/apt/sources.list'
+
 # Add the following in your /etc/apt/sources.list
-#deb http://llvm.org/apt/precise/ llvm-toolchain-precise main
-#deb-src http://llvm.org/apt/precise/ llvm-toolchain-precise main
-#deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu precise main
-agu
-agi -y libclang-3.5-dev
+sudo apt-get update
+sudo apt-get install -y libclang-3.5-dev --force-yes
 sudo ln -s /usr/lib/llvm-3.5/lib/libclang.so /usr/lib/
 cd ~/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer --system-libclang
 
 # Colormake
-agi -y colormake
+sudo apt-get install -y colormake
 # Htop
-agi -y htop
+sudo apt-get install -y htop
 
 # Compile latest VIM
-agi -y ncurses-dev
-agi -y python2.7-dev
-agi -y mercurial
+sudo apt-get install -y ncurses-dev
+sudo apt-get install -y python2.7-dev
+sudo apt-get install -y mercurial
 hg clone https://vim.googlecode.com/hg/ vim
 cd vim
 hg pull
@@ -63,13 +72,12 @@ hg update default
 make -j2
 sudo make install
 cd
-zsh
+source .zshrc
 
-agi -y automake
-agi -y autoconf
-agi -y libtool
+sudo apt-get install -y automake
+sudo apt-get install -y autoconf
+sudo apt-get install -y libtool
 
-mkdir dev
+mkdir -p dev
 
-
-
+sudo apt-get install -y tig
