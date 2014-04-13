@@ -13,4 +13,6 @@
     st = status
     up = "!git remote update -p; git merge --ff-only @{u}"
 [color]
-    ui = true
+	ui = 1
+[help]
+	autocorrect = 1
