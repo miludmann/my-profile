@@ -161,3 +161,9 @@ eval "$(rbenv init -)"
 
 export PROTOBUF_DIR=/home/parapampa/dev/orwell/protobuf-2.5.0
 export JEROMQ_DIR=/home/parapampa/dev/orwell/jeromq
+export JUNIT_DIR=/home/parapampa/dev/orwell/junit
+export HAMCREST_DIR=/home/parapampa/dev/orwell/hamcrest-core
+
+export GIT_EDITOR=vim
+export VISUAL=vim
+export EDITOR=vim
