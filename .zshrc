@@ -166,6 +166,8 @@ export HAMCREST_DIR=/home/parapampa/dev/orwell/hamcrest-core
 export EASYMOCK_DIR=/home/parapampa/dev/orwell/easymock
 export OBJENESIS_DIR=/home/parapampa/dev/orwell/easymock
 export CGLIB_DIR=/home/parapampa/dev/orwell/easymock
+export ASM_DIR=/home/parapampa/dev/orwell/easymock
+
 
 export GIT_EDITOR=vim
 export VISUAL=vim
