@@ -161,6 +161,7 @@ eval "$(rbenv init -)"
 
 export PROTOBUF_DIR=/home/parapampa/dev/orwell/protobuf-2.5.0
 export PROXY_ROBOTS_JARS_DIR=/home/parapampa/dev/orwell/proxy-robots-jars
+export JEROMQ_DIR=/home/parapampa/dev/orwell/jeromq
 
 export GIT_EDITOR=vim
 export VISUAL=vim
