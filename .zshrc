@@ -160,16 +160,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 export PROTOBUF_DIR=/home/parapampa/dev/orwell/protobuf-2.5.0
-export JEROMQ_DIR=/home/parapampa/dev/orwell/jeromq
-export JUNIT_DIR=/home/parapampa/dev/orwell/junit
-export HAMCREST_DIR=/home/parapampa/dev/orwell/hamcrest-core
-export EASYMOCK_DIR=/home/parapampa/dev/orwell/easymock
-export OBJENESIS_DIR=/home/parapampa/dev/orwell/easymock
-export CGLIB_DIR=/home/parapampa/dev/orwell/easymock
-export ASM_DIR=/home/parapampa/dev/orwell/easymock
-export POWERMOCK_DIR=/home/parapampa/dev/orwell/easymock
-export JAVASSIST_DIR=/home/parapampa/dev/orwell/easymock
-
+export PROXY_ROBOTS_JARS_DIR=/home/parapampa/dev/orwell/proxy-robots-jars
 
 export GIT_EDITOR=vim
 export VISUAL=vim
