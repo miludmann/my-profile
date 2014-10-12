@@ -12,25 +12,25 @@ sudo apt-get install -y rbenv curl
 
 # Personal profile
 cd
-git clone https://github.com/miludmann/my-profile
-cat .bashrc my-profile/.bashrc > .bashrc_tmp
+git clone https://github.com/miludmann/my-profile .my-profile
+cat .bashrc .my-profile/.bashrc > .bashrc_tmp
 rm -f .bashrc
 mv .bashrc_tmp .bashrc
-ln -s my-profile/.aliases
-ln -s my-profile/.gitconfig
-ln -s my-profile/.gitignore_global
+ln -s ./my-profile/.aliases
+ln -s ./my-profile/.gitconfig
+ln -s ./my-profile/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 
 sudo apt-get install -y zsh
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-ln -s my-profile/.zshrc
+ln -s ./my-profile/.zshrc
 source .zshrc
 chsh -s /bin/zsh
 
 # Custom VIM
 cd
-git clone https://github.com/miludmann/my-vim
-ln -s my-vim .vim
+git clone https://github.com/miludmann/my-vim ./my-vim
+ln -s .my-vim .vim
 cd .vim
 git submodule update --init --recursive
 cd
