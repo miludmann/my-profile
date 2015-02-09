@@ -89,7 +89,7 @@ bindkey '\e[B' down-line-or-beginning-search
 ###############################################################################
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-source $HOME/.aliases
+[ -f $HOME/.aliases ] && source $HOME/.aliases || echo "$HOME/.aliases not found"
 
 ###############################################################################
 # Functions
@@ -155,7 +155,12 @@ if [ -f $HOME/.Xdefaults ]; then
     xrdb -merge $HOME/.Xdefaults
 fi
 
-~/solarize.sh dark
+if [ -f $HOME/solarize.sh ]; then
+    $HOME/solarize.sh dark
+else
+    echo "$HOME/solarize.sh not found"
+fi
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
@@ -172,3 +177,19 @@ export ASM_DIR=/home/parapampa/dev/orwell/easymock
 export GIT_EDITOR=vim
 export VISUAL=vim
 export EDITOR=vim
+
+# added by travis gem
+[ -f /home/mludmann/.travis/travis.sh ] && source /home/mludmann/.travis/travis.sh
+
+# pip zsh completion start
+function _pip_completion {
+  local words cword
+  read -Ac words
+  read -cn cword
+  reply=( $( COMP_WORDS="$words[*]" \
+             COMP_CWORD=$(( cword-1 )) \
+             PIP_AUTO_COMPLETE=1 $words[1] ) )
+}
+compctl -K _pip_completion pip
+# pip zsh completion end
+
