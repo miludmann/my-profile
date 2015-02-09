@@ -15,6 +15,7 @@ alias top='htop'
 alias make='colormake'
 alias git='hub'
 alias fuck='sudo $(fc -nl -1)'
+alias tail='colortail'
 
 function mkgo() { mkdir -p "$@" && eval cd "\"\$$#\"";}
 
