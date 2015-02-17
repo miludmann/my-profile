@@ -81,3 +81,4 @@ sudo apt-get install -y libtool
 mkdir -p dev
 
 sudo apt-get install -y tig
+sudo apt-get install -y colortail

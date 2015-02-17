@@ -1,4 +1,4 @@
-source ~/.bash_aliases
+[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases || echo "$HOME/.bash_aliases not found"
 #LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:/usr/lib32:$LIBRARY_PATH 
 #export LIBRARY_PATH
 
@@ -59,5 +59,5 @@ else
     start_agent;
 fi
 
-source ~/germs/germs/infect.sh
-source ~/germs/germs/cure.sh
+[ -f $HOME/.germs/germs/infect.sh ] && source $HOME/germs/germs/infect.sh || echo "$HOME/germs/germs/infect.sh not found"
+[ -f $HOME/.germs/germs/cure.sh ] && source $HOME/germs/germs/cure.sh || echo "$HOME/germs/germs/cure.sh not found"
