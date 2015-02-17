@@ -166,3 +166,5 @@ export JEROMQ_DIR=/home/parapampa/dev/orwell/jeromq
 export GIT_EDITOR=vim
 export VISUAL=vim
 export EDITOR=vim
+
+export PATH="$HOME/bin:$PATH"
