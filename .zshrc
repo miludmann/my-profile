@@ -172,6 +172,8 @@ export GIT_EDITOR=vim
 export VISUAL=vim
 export EDITOR=vim
 
+export PATH="$HOME/bin:$PATH"
+=======
 # added by travis gem
 [ -f /home/mludmann/.travis/travis.sh ] && source /home/mludmann/.travis/travis.sh
 
