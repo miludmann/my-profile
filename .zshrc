@@ -110,10 +110,15 @@ if [ -d "$HOME/env/gcc-4.8.0/bin" ] ; then
     CXX="$HOME/env/gcc-4.8.0/bin/g++:$CXX"
 fi
 
-# leJOS intallation directory
+# leJOS NXT intallation directory
 if [ -d "/opt/leJOS_NXJ" ] ; then
     export NXJ_HOME="/opt/leJOS_NXJ"
     PATH="$NXJ_HOME/bin:$PATH"
+fi
+# leJOS EV3 intallation directory
+if [ -d "/opt/leJOS_EV3" ] ; then
+    export EV3_HOME="/opt/leJOS_EV3"
+    PATH="$EV3_HOME/bin:$PATH"
 fi
 
 # Local binaries (for new tools, like VIM)
